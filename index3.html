@@ -1,0 +1,283 @@
+<!--<p>kjhfgkjhd</p>-->
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <script src="index3.js"></script>
+    <!--<script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+ <!--   <link href="style.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Bowlby One SC' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Allerta' rel='stylesheet'>
+  <title>Tvättid</title>
+</head>
+<body>
+  
+ <!-- 
+  
+ <div class="container">
+     
+  
+   <header class="header">
+    <div class="box">
+    
+    <div class="ledig">     
+        <img src="tsymbol1.png" class="ledigbox">
+     <div class="boxtext">Ledig</div>
+    </div>    
+   
+    <div class="bokad">  
+        <img src="tsymbol2.png" class="bokadbox">
+     <div class="boxtext">Bokad</div> 
+    </div>  
+         
+    </div>   
+ -->      
+    
+<!-- Array Månad/År visning med style och responsiv. JS koden går ej att css:a  -->   
+ <!--   <div class="month" style="color: #DADADC; font-family: 'Bowlby One SC'; font-size:3vw; margin-top: 10px; margin-left: 210px;">
+        <script>
+            var monthNames = ["Januari", "Februari", "Mars", "April", "Maj", "Juni", "Juli", "Agusti", "September", "Oktober", "November", "December"];
+            var d = new Date();
+             document.write( monthNames[d.getMonth()] ); 
+           /*document.write(new Date().getFullYear());*/
+        </script> 
+        <script>
+            var d = new Date();
+             document.write(new Date().getFullYear());
+        </script> 
+    </div>    
+       
+       <!--<p>logg</p>-->
+       
+ <!--   </header>  
+     
+     
+  <table class="table1">
+   <thead>   
+    <tr>
+       <th> 
+       <!-- <a href="#" class="veckabtn" onclick="toggleVisibility('Menu1');">&#x0003C;</a>
+           <p id="veckatext">ANNAN VECKA</p>
+        <a href="#" class="veckabtn" onclick="toggleVisibility('Menu2');">&#x0003E;</a> -->
+<!--       </th>  
+       <th>08-11</th> 
+       <th>11-14</th> 
+       <th>14-17</th> 
+       <th>17-20</th> 
+    </tr>
+   </thead>  
+      
+        
+   <tbody id="Menu1" >  
+    <tr id="toggle1">
+      <td  class="datum">1<p class="dag">MÅNDAG</p></td>
+      <td  onclick="toggleswappa1(this);" class="out"></td> 
+      <td  onclick="toggleswappa1(this);" class="out"></td> 
+      <td  onclick="toggleswappa1(this);" class="out"></td> 
+      <td  onclick="toggleswappa1(this);" class="out"></td>
+    </tr>
+    <tr id="toggle2">
+      <td class="datum">2<p class="dag">TISDAG</p></td> 
+      <td onclick="toggleswappa2(this);" class="out"></td> 
+      <td onclick="toggleswappa2(this);" class="out"></td> 
+      <td onclick="toggleswappa2(this);" class="out"></td> 
+      <td onclick="toggleswappa2(this);" class="out"></td>  
+    </tr>
+    <tr id="toggle3">
+      <td class="datum">3<p class="dag">ONSDAG</p></td> 
+      <td onclick="toggleswappa3(this);" class="out"></td> 
+      <td onclick="toggleswappa3(this);" class="out"></td> 
+      <td onclick="toggleswappa3(this);" class="out"></td> 
+      <td onclick="toggleswappa3(this);" class="out"></td> 
+    </tr>
+    <tr id="toggle4">
+      <td class="datum">4<p class="dag">TORSDAG</p></td>  
+      <td onclick="toggleswappa4(this);" class="out"></td> 
+      <td onclick="toggleswappa4(this);" class="out"></td> 
+      <td onclick="toggleswappa4(this);" class="out"></td> 
+      <td onclick="toggleswappa4(this);" class="out"></td>   
+    </tr>
+    <tr id="toggle5">
+      <td class="datum">5<p class="dag">FREDAG</p></td> 
+      <td onclick="toggleswappa5(this);" class="out"></td> 
+      <td onclick="toggleswappa5(this);" class="out"></td> 
+      <td onclick="toggleswappa5(this);" class="out"></td> 
+      <td onclick="toggleswappa5(this);" class="out"></td>   
+    </tr>
+    <tr id="toggle6">
+      <td class="datum">6<p class="dag">LÖRDAG</p></td> 
+      <td onclick="toggleswappa6(this);" class="out"></td> 
+      <td onclick="toggleswappa6(this);" class="out"></td> 
+      <td onclick="toggleswappa6(this);" class="out"></td> 
+      <td onclick="toggleswappa6(this);" class="out"></td>   
+    </tr>
+    <tr id="toggle7">
+      <td class="datum">7<p class="dag">SÖNDAG</p></td> 
+      <td onclick="toggleswappa7(this);" class="out"></td> 
+      <td onclick="toggleswappa7(this);" class="out"></td> 
+      <td onclick="toggleswappa7(this);" class="out"></td> 
+      <td onclick="toggleswappa7(this);" class="out"></td>    
+    </tr>    
+   </tbody> 
+   
+  <!-- <tbody id="Menu2" style="display: none;">  
+    <tr id="toggle1">
+      <td class="datum">8<p class="dag">MÅNDAG</p></td>
+      <td  onclick="toggleswappa1(this);" class="out"></td> 
+      <td  onclick="toggleswappa1(this);" class="out"></td> 
+      <td  onclick="toggleswappa1(this);" class="out"></td> 
+      <td  onclick="toggleswappa1(this);" class="out"></td>
+        
+    </tr>     
+    <tr id="toggle2">
+      <td class="datum">9<p class="dag">TISDAG</p></td> 
+      <td onclick="toggleswappa2(this);" class="out"></td> 
+      <td onclick="toggleswappa2(this);" class="out"></td> 
+      <td onclick="toggleswappa2(this);" class="out"></td> 
+      <td onclick="toggleswappa2(this);" class="out"></td>  
+    </tr>
+    <tr id="toggle3">
+      <td class="datum">10<p class="dag">ONSDAG</p></td> 
+      <td onclick="toggleswappa3(this);" class="out"></td> 
+      <td onclick="toggleswappa3(this);" class="out"></td> 
+      <td onclick="toggleswappa3(this);" class="out"></td> 
+      <td onclick="toggleswappa3(this);" class="out"></td> 
+    </tr>
+    <tr id="toggle4">
+      <td class="datum">11<p class="dag">TORSDAG</p></td>  
+      <td onclick="toggleswappa4(this);" class="out"></td> 
+      <td onclick="toggleswappa4(this);" class="out"></td> 
+      <td onclick="toggleswappa4(this);" class="out"></td> 
+      <td onclick="toggleswappa4(this);" class="out"></td>   
+    </tr>
+    <tr id="toggle5">
+      <td class="datum">12<p class="dag">FREDAG</p></td> 
+      <td onclick="toggleswappa5(this);" class="out"></td> 
+      <td onclick="toggleswappa5(this);" class="out"></td> 
+      <td onclick="toggleswappa5(this);" class="out"></td> 
+      <td onclick="toggleswappa5(this);" class="out"></td>   
+    </tr>
+    <tr id="toggle6">
+      <td class="datum">13<p class="dag">LÖRDAG</p></td> 
+      <td onclick="toggleswappa6(this);" class="out"></td> 
+      <td onclick="toggleswappa6(this);" class="out"></td> 
+      <td onclick="toggleswappa6(this);" class="out"></td> 
+      <td onclick="toggleswappa6(this);" class="out"></td>   
+    </tr>
+    <tr id="toggle7">
+      <td class="datum">14<p class="dag">SÖNDAG</p></td> 
+      <td onclick="toggleswappa7(this);" class="out"></td> 
+      <td onclick="toggleswappa7(this);" class="out"></td> 
+      <td onclick="toggleswappa7(this);" class="out"></td> 
+      <td onclick="toggleswappa7(this);" class="out"></td>    
+    </tr>    
+   </tbody>  -->
+      
+ <!--  </table> 
+     
+</div>
+    
+    
+    
+</body>
+</html>         
+
+-->
+
+
+
+  
+  
+ 
+     
+  <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Tvätt</title>
+      
+    
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-messaging.js"></script>      
+      
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA1edzFaDfChQNc015n7YIO4LNBQ7S6oNQ",
+    authDomain: "login-174bf.firebaseapp.com",
+    databaseURL: "https://login-174bf.firebaseio.com",
+    projectId: "login-174bf",
+    storageBucket: "login-174bf.appspot.com",
+    messagingSenderId: "252665184387"
+  };
+  firebase.initializeApp(config);
+</script>
+      
+      
+    <script type="text/javascript">
+      initApp = function() {
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            // User is signed in.
+            var displayName = user.displayName;
+            var email = user.email;
+            var emailVerified = user.emailVerified;
+            var photoURL = user.photoURL;
+            var uid = user.uid;
+            var phoneNumber = user.phoneNumber;
+            var providerData = user.providerData;
+            user.getIdToken().then(function(accessToken) {
+              document.getElementById('sign-in-status').textContent = 'Signed in';
+              document.getElementById('sign-in').textContent = 'Sign out';
+              document.getElementById('account-details').textContent = JSON.stringify({
+                displayName: displayName,
+                email: email,
+                emailVerified: emailVerified,
+                phoneNumber: phoneNumber,
+                photoURL: photoURL,
+                uid: uid,
+                accessToken: accessToken,
+                providerData: providerData
+              }, null, '  ');
+            });
+          } else {
+            // User is signed out.
+            document.getElementById('sign-in-status').textContent = 'Signed out';
+            document.getElementById('sign-in').textContent = 'Sign in';
+            document.getElementById('account-details').textContent = 'null';
+          }
+        }, function(error) {
+          console.log(error);
+        });
+      };
+
+      window.addEventListener('load', function() {
+        initApp()
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Welcome you are signed in</h1>
+    <div id="sign-in-status"></div>
+    <div id="sign-in"></div>
+    <div id="account-details"></div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
