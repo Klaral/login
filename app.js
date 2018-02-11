@@ -26,7 +26,7 @@ app.get('/index2', function(req, res) {
 });
 
 app.get('/index3', function(req, res) {
-    res.sendFile(__dirname + '/index3.html');
+    res.sendFile(__dirname + '/https://klaral.github.io/index3.html');
 });
 
 /*app.get('*', function(req, res) {
