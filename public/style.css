@@ -100,6 +100,7 @@ header {
     font-size: 12px;
 }
 
+
 .loggainut {
     font-family: 'Allerta';
     font-size: 12px;
@@ -133,7 +134,7 @@ td {
 
 /*.vecka{
     border: 2px solid yellow;
-}
+}*/
 
 .veckabtn {
     text-decoration: none;
@@ -152,20 +153,11 @@ td {
     font-size: 12px;
     display: inline-block;
         
-    }   */ 
+    }   
     
 
 /***************************************************************************************************/
 
-
-.tid {
-    border-right: 1px solid #FFFFFF;
-    border-left: 1px solid #FFFFFF;
-}
-
-.tidh {
-    border-left: 1px solid #FFFFFF;
-}
 
 
 .datum {

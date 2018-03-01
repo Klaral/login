@@ -1,50 +1,3 @@
-<!--<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">   
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Bowlby One SC' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Allerta' rel='stylesheet'>
-  <title>LogIn</title>
-</head>
-<body>
-  
-    <div class="container">
-        <input id="textEmail" type="email" placeholder="Email">
-        <input id="textPassword" type="password" placeholder="Password">
-        
-        
-        <button id="btnLogin" class="btnaction">Log In</button>
-        
-        <button id="btnSignUp" class="btnsecondary">Sign Up</button>
-        
-        <button id="btnLogout" class="btnactionhide">Log out</button> 
-    </div>
-   
-    
-    
-<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script> 
-    <script>
-        // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyA1edzFaDfChQNc015n7YIO4LNBQ7S6oNQ",
-    authDomain: "login-174bf.firebaseapp.com",
-    databaseURL: "https://login-174bf.firebaseio.com",
-    projectId: "login-174bf",
-    storageBucket: "login-174bf.appspot.com",
-    messagingSenderId: "252665184387"
-  };
-  
-  firebase.initializeApp(config);
-    </script>
-<script src="index.js"></script>
-
-</body>
-</html>
-
--->
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -57,7 +10,8 @@
 <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-database.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-messaging.js"></script>      
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-messaging.js"></script> 
+      
       
 <script>
   // Initialize Firebase
@@ -78,7 +32,8 @@
     <script type="text/javascript">
       // FirebaseUI config.
       var uiConfig = {
-        signInSuccessUrl: '/login/index3.html',
+        /*signInSuccessUrl: '/login/index3.html',*/
+          signInSuccessUrl: '/index3',
         signInOptions: [
           // Leave the lines as is for the providers you want to offer your users.
           firebase.auth.GoogleAuthProvider.PROVIDER_ID,

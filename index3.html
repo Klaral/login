@@ -1,26 +1,117 @@
-<!--<p>kjhfgkjhd</p>-->
-
-<!--<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">   
-    <script src="index3.js"></script>
-    <!--<script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
- <!--   <link href="style.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Bowlby One SC' rel='stylesheet'>
+  <head>
+    <meta charset="UTF-8">
+      <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-database.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-messaging.js"></script>  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">      
+  <title>Tvätt</title>      
+      
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA1edzFaDfChQNc015n7YIO4LNBQ7S6oNQ",
+    authDomain: "login-174bf.firebaseapp.com",
+    databaseURL: "https://login-174bf.firebaseio.com",
+    projectId: "login-174bf",
+    storageBucket: "login-174bf.appspot.com",
+    messagingSenderId: "252665184387"
+  };
+  firebase.initializeApp(config);
+</script>
+      
+      
+    <script type="text/javascript">
+      initApp = function() {
+           var auth = firebase.auth();
+           var btnLogout = document.getElementById("btnLogout");
+          
+          btnLogout.addEventListener('click', e => {
+            firebase.auth().signOut();
+        });
+          
+        firebase.auth().onAuthStateChanged(function(user) {
+            
+            if(user){
+                console.log(user);
+                btnLogout.classList.remove('btnactionhide')
+            } else {
+                console.log('not logged in');
+                btnLogout.classList.add('btnactionhide')
+            } 
+            
+            
+         // if (user) {
+            // User is signed in.
+         /*   var displayName = user.displayName;
+            var email = user.email;
+            var emailVerified = user.emailVerified;
+            var photoURL = user.photoURL;
+            var uid = user.uid;
+            var phoneNumber = user.phoneNumber;
+            var providerData = user.providerData;
+            user.getIdToken().then(function(accessToken) {
+              document.getElementById('sign-in-status').textContent = 'Signed in';
+              document.getElementById('sign-in').textContent = 'Sign out';
+              document.getElementById('account-details').textContent = JSON.stringify({
+                displayName: displayName,
+                email: email,
+                emailVerified: emailVerified,
+                phoneNumber: phoneNumber,
+                photoURL: photoURL,
+                uid: uid,
+                accessToken: accessToken,
+                providerData: providerData
+              }, null, '  ');
+            });
+          } else {
+            // User is signed out.
+            document.getElementById('sign-in-status').textContent = 'Signed out';
+            document.getElementById('sign-in').textContent = 'Sign in';
+            document.getElementById('account-details').textContent = 'null';
+          }
+        }, function(error) {
+          console.log(error);
+        });*/
+      });
+
+      window.addEventListener('load', function() {
+        initApp()
+      });
+          
+          };
+    </script>
+      
+      <script src="index3.js"></script>
+      <link href="style.css" rel="stylesheet" type="text/css">
+      <link href='https://fonts.googleapis.com/css?family=Bowlby One SC' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Allerta' rel='stylesheet'>
-  <title>Tvättid</title>
+  
 </head>
 <body>
-  
- <!-- 
-  
- <div class="container">
-     
-  
-   <header class="header">
+   <!-- <h1>Welcome you are signed in</h1>
+    <div id="sign-in-status"></div>
+    <div id="sign-in"></div>
+    <div id="account-details"></div>-->
+      
+    <!--<h1>Welcome you are signed in</h1>
+    <div id="sign-in-status"></div>
+    <button id="btnLogout" class="btnactionhide">Log out</button>
+    <div id="account-details"></div>-->
+      
+      
+      
+      
+      
+      
+      
+      
+    <div class="container">  
+      <header class="header">
     <div class="box">
     
     <div class="ledig">     
@@ -32,37 +123,39 @@
         <img src="tsymbol2.png" class="bokadbox">
      <div class="boxtext">Bokad</div> 
     </div>  
+       </div>  
+        
+        
          
-    </div>   
- -->      
-    
-<!-- Array Månad/År visning med style och responsiv. JS koden går ej att css:a  -->   
- <!--   <div class="month" style="color: #DADADC; font-family: 'Bowlby One SC'; font-size:3vw; margin-top: 10px; margin-left: 210px;">
+    <!-- Array Månad/År visning med style och responsiv. JS koden går ej att css:a  -->   
+    <div class="month" style="color: #DADADC; font-family: 'Bowlby One SC'; font-size:3vw; margin-top: 10px; margin-left: 210px;">
         <script>
             var monthNames = ["Januari", "Februari", "Mars", "April", "Maj", "Juni", "Juli", "Agusti", "September", "Oktober", "November", "December"];
             var d = new Date();
-             document.write( monthNames[d.getMonth()] ); 
-           /*document.write(new Date().getFullYear());*/
+             document.write( monthNames[d.getMonth()] );
+          /* document.write(new Date().getFullYear());*/
         </script> 
         <script>
             var d = new Date();
              document.write(new Date().getFullYear());
         </script> 
-    </div>    
-       
-       <!--<p>logg</p>-->
-       
- <!--   </header>  
+    </div>   
+      
+    <!-- <a>Logga ut</a> -->
+        
+        </header>
      
-     
-  <table class="table1">
+      
+      
+      <table class="table1">
+          
    <thead>   
     <tr>
-       <th> 
-       <!-- <a href="#" class="veckabtn" onclick="toggleVisibility('Menu1');">&#x0003C;</a>
+       <th class="vecka">
+        <a href="#" class="veckabtn" onclick="toggleVisibility('Menu1');">&#x0003C;</a>
            <p id="veckatext">ANNAN VECKA</p>
-        <a href="#" class="veckabtn" onclick="toggleVisibility('Menu2');">&#x0003E;</a> -->
-<!--       </th>  
+        <a href="#" class="veckabtn" onclick="toggleVisibility('Menu2');">&#x0003E;</a>
+       </th>
        <th>08-11</th> 
        <th>11-14</th> 
        <th>14-17</th> 
@@ -122,8 +215,8 @@
       <td onclick="toggleswappa7(this);" class="out"></td>    
     </tr>    
    </tbody> 
-   
-  <!-- <tbody id="Menu2" style="display: none;">  
+          
+   <tbody id="Menu2" style="display: none;">  
     <tr id="toggle1">
       <td class="datum">8<p class="dag">MÅNDAG</p></td>
       <td  onclick="toggleswappa1(this);" class="out"></td> 
@@ -174,106 +267,16 @@
       <td onclick="toggleswappa7(this);" class="out"></td> 
       <td onclick="toggleswappa7(this);" class="out"></td>    
     </tr>    
-   </tbody>  -->
+   </tbody>            
       
- <!--  </table> 
-     
-</div>
-    
-    
+      
+      
+      
+</table> 
+         </div>
+  
     
 </body>
-</html>         
-
--->
-
-
-
-  
-  
- 
-     
-  <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Tvätt</title>
-      
-    
-<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-messaging.js"></script>      
-      
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyA1edzFaDfChQNc015n7YIO4LNBQ7S6oNQ",
-    authDomain: "login-174bf.firebaseapp.com",
-    databaseURL: "https://login-174bf.firebaseio.com",
-    projectId: "login-174bf",
-    storageBucket: "login-174bf.appspot.com",
-    messagingSenderId: "252665184387"
-  };
-  firebase.initializeApp(config);
-</script>
-      
-      
-    <script type="text/javascript">
-      initApp = function() {
-        firebase.auth().onAuthStateChanged(function(user) {
-          if (user) {
-            // User is signed in.
-            var displayName = user.displayName;
-            var email = user.email;
-            var emailVerified = user.emailVerified;
-            var photoURL = user.photoURL;
-            var uid = user.uid;
-            var phoneNumber = user.phoneNumber;
-            var providerData = user.providerData;
-            user.getIdToken().then(function(accessToken) {
-              document.getElementById('sign-in-status').textContent = 'Signed in';
-              document.getElementById('sign-in').textContent = 'Sign out';
-              document.getElementById('account-details').textContent = JSON.stringify({
-                displayName: displayName,
-                email: email,
-                emailVerified: emailVerified,
-                phoneNumber: phoneNumber,
-                photoURL: photoURL,
-                uid: uid,
-                accessToken: accessToken,
-                providerData: providerData
-              }, null, '  ');
-            });
-          } else {
-            // User is signed out.
-            document.getElementById('sign-in-status').textContent = 'Signed out';
-            document.getElementById('sign-in').textContent = 'Sign in';
-            document.getElementById('account-details').textContent = 'null';
-          }
-        }, function(error) {
-          console.log(error);
-        });
-      };
-
-      window.addEventListener('load', function() {
-        initApp()
-      });
-    </script>
-  </head>
-  <body>
-   <!-- <h1>Welcome you are signed in</h1>
-    <div id="sign-in-status"></div>
-    <div id="sign-in"></div>
-    <div id="account-details"></div>-->
-      
-    <h1>Welcome you are signed in</h1>
-    <div id="sign-in-status"></div>
-    <button id="sign-in" class="btnactionhide"></button>
-    <div id="account-details"></div>
-  </body>
 </html>
 
 

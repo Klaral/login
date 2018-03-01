@@ -18,7 +18,6 @@ function toggleswappa1(el) {
     }
         el.className = "out";
     }
-     
  }
 
 function toggleswappa2(el) {
@@ -143,6 +142,7 @@ var divs = ["Menu1", "Menu2"];
         }
       }
     }
+   
 
 
 
